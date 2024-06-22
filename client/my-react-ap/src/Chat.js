@@ -45,7 +45,7 @@ function Chat({socket ,username , room}) {
           <div className="message" id ={username === messageContent.author ? "you"
             :"other"
           }>
-
+{/* asdjfasf */}
             <div> 
               <div className="message-content">
                 <p>{messageContent.message}</p>
