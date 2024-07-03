@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 
-
 function Chat({socket ,username , room}) {
 
   const [currentMessage, setCurrentMessage] = useState("");
@@ -33,13 +32,14 @@ function Chat({socket ,username , room}) {
   }, [socket]);
 
   return (
+   
     <div className="chat-window"> 
 
       <div className="chat-header">
       <p>JNTU CONNECTS</p>
       </div>
       <div className="chat-body">
-
+<scroll></scroll>
         {messageList.map((messageContent)=>{
         return(
           <div className="message" id ={username === messageContent.author ? "you"
@@ -59,11 +59,12 @@ function Chat({socket ,username , room}) {
         );
 })}
 
+
       </div>
       <div className="chat-footer">
         <input type="text" 
         value={currentMessage}
-        placeholder="Hey..." 
+        placeholder="Connect The way You Want..." 
          onChange={(event) => {
           setCurrentMessage(event.target.value);
         }}
@@ -72,9 +73,11 @@ function Chat({socket ,username , room}) {
           }}
         />
         <button onClick={sendMessage}> &#9658;</button>
+       
       </div>
-      
+     
       </div>
+   
   )
 }
 

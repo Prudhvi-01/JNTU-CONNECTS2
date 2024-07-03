@@ -1,8 +1,8 @@
 .App {
   width: 100vw;
   height: 100vh;
-  background: #fff;
-  color: #212121;
+  background: black;
+  color: whitesmoke;
   font-family: "Open Sans", sans-serif;
   display: grid;
   place-items: center;
@@ -51,8 +51,9 @@ body {
 }
 
 .chat-window {
-  width: 300px;
-  height: 420px;
+  margin-top: 30px;
+  width: 750px;
+  height: 570px;
 }
 
 .chat-window p {
@@ -64,6 +65,7 @@ body {
   background: #263238;
   position: relative;
   cursor: pointer;
+  text-align: center;
 }
 .chat-window .chat-header p {
   display: block;
@@ -77,7 +79,7 @@ body {
   height: calc(450px - (45px + 70px));
   border: 1px solid #263238;
   background: #fff;
-
+  overflow: auto;
   position: relative;
 }
 .chat-window .chat-body .message-container {
@@ -99,8 +101,8 @@ body {
 .chat-window .chat-body .message .message-content {
   width: auto;
   height: auto;
-  min-height: 40px;
-  max-width: 120px;
+  min-height: 60px;
+  max-width: 300px;
   background-color: #43a047;
   border-radius: 5px;
   color: white;
@@ -125,6 +127,7 @@ body {
 #you .message-meta {
   justify-content: flex-start;
   margin-left: 5px;
+  color: black;
 }
 
 #other {
@@ -138,12 +141,15 @@ body {
 
 #other .message-meta {
   justify-content: flex-end;
-  margin-right: 5px;
+  margin-right: 15px;
+  color: black;
+  
 }
 
 .message-meta #author {
   margin-left: 10px;
   font-weight: bold;
+  color: black;
 }
 
 .chat-window .chat-body .message .message-meta {
